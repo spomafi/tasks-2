@@ -5,5 +5,5 @@ function pow(x, y) {
 
   return x * pow(x, y - 1)
 }
-  
+
 console.log( pow(2, 4) )
