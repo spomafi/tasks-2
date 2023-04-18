@@ -1,9 +1,9 @@
-function pow(x, n) {
-  if (n != 1) {
-    return x * pow(x, n - 1);
-  } else {
-    return x;
+function pow(x, y) {
+  if (y === 0) {
+    return 1
   }
+
+  return x * pow(x, y - 1)
 }
   
-console.log( pow(2, 3) )
+console.log( pow(2, 4) )
