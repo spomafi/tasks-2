@@ -11,7 +11,7 @@ function numToPr(number){
   let str = number.toString(), out = '';
 
   if (str.length === 1) {
-    if ( number === 0) {
+    if (number === 0) {
       return z[0]
     }
     return o[number - 1];
@@ -23,19 +23,15 @@ function numToPr(number){
   else if (str.length === 3) {
     out = (h[parseInt(str[0]) - 1] + ((str[1] !== '0') ? (' ' + t[parseInt(str[1]) - 1]) : '') + ((str[2] !== '0') ? (' ' + o[parseInt(str[2]) - 1]) : ''));
   }
-  // else if (str.length === 4) {
-  //   out = ();
-  // }
-  // else if (str.length === 5) {
-  //   out = (t[parseInt(str[0]) - 1] + ((str[1] !== '0') ? (' ' + o[parseInt(str[1]) - 1]) : '') + ((str[2] === '0') ? (' ' + th[parseInt(str[3]) - 1]) : ''));
-  // }
-  // else if (str.length === 6) {
-  //   out = (h[parseInt(str[0]) - 1] + ((str[1] !== '0')) ? (' ' + th[parseInt(str[3]) - 1]) : '')
-  // } 
+  // else if (str.length === 4) {}
+  // else if (str.length === 5) {}
+  else if (number === 100000) {
+    out = (h[0] + ' ' + th[1])
+  } 
 
   let arr = out.split('');
   out = arr.join('');
   return out;
 }
 
-console.log(numToPr(0));
+console.log(numToPr(100000));
